@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Programa de IPTV</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.12/hls.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="channel-list" id="channelList">
+                <!-- Canais serão adicionados aqui dinamicamente -->
+            </div>
+            <input type="file" id="fileInput" accept=".m3u8,.m3u,.mp4,.mkv" style="display: none;">
+            <button class="load-button" onclick="document.getElementById('fileInput').click()">Carregar Arquivo</button>
+        </div>
+        <div class="display">
+            <video id="videoPlayer" controls>
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <div id="errorMessage"></div>
+            <div id="qualityInfo"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
